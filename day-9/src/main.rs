@@ -47,28 +47,6 @@ fn part1(arg: &str) -> i32 {
     result
 }
 
-// fn count(x: usize, y: usize, data: &[Vec<i32>], area_count: &mut i32, visited: &mut HashSet<(usize, usize)>) {
-//     let num = data[y][x];
-//     visited.insert((x, y));
-//     if x > 0 && num < 8 && data[y][x-1] == num + 1 && !visited.contains(&(x - 1, y)) {
-//         *area_count += 1;
-//         count(x-1, y, data, area_count, visited);
-//     }
-//     if y > 0 && num < 8 && data[y-1][x] == num + 1 && !visited.contains(&(x, y - 1)) {
-//         *area_count += 1;
-//         count(x, y-1, data, area_count, visited);
-
-//     }
-//     if x < data[0].len() - 1 && num < 8 && data[y][x+1] == num + 1 && !visited.contains(&(x + 1, y)) {
-//         *area_count += 1;
-//         count(x+1, y, data, area_count, visited);
-//     }
-//     if y < data.len() - 1 && num < 8 && data[y+1][x] == num + 1 && !visited.contains(&(x, y + 1)) {
-//         *area_count += 1;
-//         count(x, y+1, data, area_count, visited);
-//     }
-// }
-
 fn get_adjacent_points(x: usize, y: usize, max_x: usize, max_y: usize) -> Vec<(usize, usize)> {
     let mut v = vec![];
     if x > 0 {
